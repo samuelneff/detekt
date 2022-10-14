@@ -8,7 +8,6 @@ import io.gitlab.arturbosch.detekt.api.Severity
 import io.gitlab.arturbosch.detekt.api.internal.RequiresTypeResolution
 
 @RequiresTypeResolution
-// Not active by default (yet?): @ActiveByDefault(since = "1.23.0")
 class CloseableRequiresUse(config: Config) : Rule(config) {
 
     override val issue = Issue(
@@ -17,5 +16,4 @@ class CloseableRequiresUse(config: Config) : Rule(config) {
         "Owned Closeable instances must be invoked with .use { }; see documentation for definitions of 'owned'.",
         Debt.FIVE_MINS
     )
-
 }

@@ -1,3 +1,5 @@
+@file:Suppress("TrimMultilineRawString") // helper functions include this and in some cases an alternate is used
+
 package io.gitlab.arturbosch.detekt.rules.bugs
 
 import io.gitlab.arturbosch.detekt.api.Config
@@ -168,7 +170,6 @@ class CloseableRequiresUseSpec(private val env: KotlinCoreEnvironment) {
                 """
             )
         }
-
     }
 
     @Nested
@@ -198,8 +199,7 @@ class CloseableRequiresUseSpec(private val env: KotlinCoreEnvironment) {
             )
         }
     }
-
-
+    
     @Nested
     @Suppress("ClassName") // The inner classes fail naming check but match our Spec convention
     inner class `Closeable extension functions` {
